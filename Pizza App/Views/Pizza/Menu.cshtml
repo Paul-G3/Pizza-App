@@ -1,0 +1,36 @@
+﻿<link href="~/css/menu.css" rel="stylesheet" />
+
+<div ng-app="MenuModule">
+    <div ng-controller="MenuController">
+
+        <div class="searchContainer">
+            <input type="text" ng-model="search" class="searchInput" placeholder="Search for Pizza......" />
+        </div>
+
+        <ul class="menu">
+
+            <li ng-repeat="pizza in MenuData |filter:search" class="PizzaCard">               
+
+                <p class="image-container">
+                    <img ng-src="{{pizza.image}}" />
+                </p> 
+
+                <p class="PizzaName">{{pizza.pizzaName}}</p>
+
+                <p> <span>R</span>{{pizza.price}}</p>
+
+                <p>{{pizza.size}}</p>
+                 
+
+                <p class="button-container">
+                    <button class="add-to-cart" ng-click="addToCart(pizza)">Add to cart</button>
+                </p>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+
+
+<script src="~/js/menu.js"></script>

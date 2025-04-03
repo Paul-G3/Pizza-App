@@ -1,0 +1,136 @@
+﻿.menu {
+    list-style: none;
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;   
+    margin-left:2vw;
+}
+
+.PizzaCard {
+    width: 27vw; /* Prevents items from growing beyond 30vw */
+    height: 60vh;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 2vw 3vh 1vw;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 1vh;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.image-container {
+  height: 50vh;
+}
+
+.image-container img
+{
+    width:100%;
+    height: 100%;   
+} 
+
+.button-container
+{
+    width: 100%;
+    text-align: center;
+}
+
+.add-to-cart {
+    width: 80%;
+    text-align:center;
+    background-color: blue;
+    font-size: 1.2rem;
+    padding:10px;
+    border-radius:10px;
+    cursor:pointer;
+    border: none;
+    color:white;
+    transition:0.3s;
+}
+
+.PizzaName
+{
+    font-size:1.2rem;
+    font-weight:bold;
+}
+
+.add-to-cart:hover {
+    background-color: rgba(40, 253, 7, 0.873);
+}
+
+/*angular js css*/  
+
+    /* Enter animation */
+    .PizzaCard.ng-enter {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    .PizzaCard.ng-enter-active {
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    /* Leave animation */
+    .PizzaCard.ng-leave {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .PizzaCard.ng-leave-active {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+.searchContainer
+{
+    margin-bottom: 2vh;
+}
+
+.searchInput {
+    display: block;
+    min-width: 20vw;
+    padding: 8px 15px;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 15px;
+} 
+
+
+/*media queriries*/
+@media screen and (max-width:780px) {
+    .PizzaCard {
+        width: 45%;
+    }
+
+    .menu
+    {
+        justify-content:space-between;
+        margin-right:2vw;
+        padding: 0 2vw;
+    }
+}
+
+@media screen and (max-width:500px)
+{
+    .PizzaCard {
+        width: 85%;
+    }
+
+    .menu {
+        flex-direction: column;
+        margin-left: 8vw;
+    }
+
+    .searchContainer
+    {
+        display:flex;
+        justify-content:center;
+    }
+}

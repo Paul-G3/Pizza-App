@@ -1,0 +1,19 @@
+﻿ 
+
+.pizza-slides
+{
+     height:80vh;
+     overflow:hidden;
+     position:relative;
+}
+
+.pizza-slides img
+{
+    width:100%; 
+    border-radius:20px;
+    display:none;
+}
+
+.show{
+    display:block;
+}

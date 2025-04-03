@@ -1,0 +1,41 @@
+﻿<link href="~/css/cart.css" rel="stylesheet" />
+
+<div ng-app="CartModule">
+    <div ng-controller="CartController" class="orders-container">
+
+        <ul class="cart-list">
+            <li ng-repeat="cart in carts" class="pending-cart" >
+
+                <p class="image-container">
+                    <img ng-src="{{cart.image}}" />
+                </p>
+
+                <div class="inner-container">
+                    <p class="PizzaName">{{cart.pizzaName}}</p>
+
+                    <p class="price-container">
+                        <span>R</span> {{ (cart.price * cart.quantity).toFixed(2) }}
+                    </p>
+
+                    <div class="buttons">                       
+
+                        <button class="btn-minus" ng-click="RemoveFromCart(cart)">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <p class="total-pizzas">{{cart.quantity}}</p>
+
+                        <button class="btn-add" ng-click="AddingMore(cart)">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                 
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+<script src="~/js/cart.js"></script>
