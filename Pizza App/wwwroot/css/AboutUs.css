@@ -1,0 +1,213 @@
+﻿
+.order-heading {
+    margin-bottom: 2vh;
+}
+
+.orders-title {
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    color: rgb(97, 173, 192);
+    margin-bottom: 4vh;
+}
+
+.order-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 1rem 2rem;
+    border-radius: 15px;
+    width: 50%;
+    margin:5vh auto;
+}
+
+.order-date-time
+{
+    font-size:1.1rem;
+}
+
+.order-number {
+    font-weight: bolder;
+    font-size: 1.6rem;
+    color: #2563EB;
+    margin-bottom: 1vh;
+}
+
+.orders-items-container {
+    border: 1px solid lightgray;
+    /*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);*/
+    padding: 15px;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+.ordered-items {
+    list-style: none;
+}
+
+.item {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right:2rem;
+} 
+
+
+
+.item i {
+    font-size: 1.2rem;
+}
+
+
+.items-text {
+    color: hsl(0, 0%, 40%);
+    padding-bottom: 4px;
+    border-bottom: 0.2px solid gray; 
+    font-size: 1.2rem;
+}
+
+.left-inner-item:first-child
+{
+    margin-right:1.3rem;
+}
+
+.item-quantity {
+    color: dodgerblue;
+    font-weight:bolder;
+    font-size:1.2rem;
+}
+/*prices*/
+.sub-total {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+    padding-bottom: 2px;
+}
+.vat {
+    margin-bottom: 1vh;
+    padding-bottom: 2px;
+}
+
+.total {
+    border-top: 0.5px solid lightgray; 
+    padding-top: 6px; 
+    margin-bottom: 1vh;
+    padding-bottom: 2px;
+}
+
+#cash {
+    color: green;
+    font-size: 1.2rem;
+} 
+
+/*oder status*/
+.no-orders {
+    text-align: center;
+    font-size: 1.3rem;
+} 
+
+
+/*step progress bar*/
+.progress-container {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 7rem; 
+}
+
+.progress-item {
+    position: relative; 
+    flex-shrink: 0;
+    flex:1;
+}
+
+.progress-item-text {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #3B82F6;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1E90FF;
+    
+}
+
+.icon i {
+  font-size: 1.5rem;
+  margin:15px 18px;
+  color:white;
+}
+
+.icon::after {
+    position: absolute;
+    content: "";
+    width: 105%;
+    height: 6px;
+    background-color: lightgray;
+    z-index: -1;
+    top: 35%;
+}
+
+
+.progress-item:nth-child(4) .icon::after {
+    width: 0;
+}
+
+.progress-item.line-blue .icon::after {
+    background-color: #38BDF8;
+} 
+
+@media (max-width: 1200px)
+{
+    .order-card {
+        width: 70%
+    }
+}
+
+@media (max-width: 768px) {
+    .progress-container {
+        margin: 0 3rem;
+        width: 100%;
+    }
+
+    .order-card
+    {
+        width:80%
+    }
+}
+
+
+@media (max-width: 550px) {
+    .progress-container {
+        margin: 0 1rem;
+        width: 100%;
+    }
+
+    .icon {
+    width: 40px;
+    height: 40px; 
+    
+    }
+
+   .icon i {
+    font-size: 1.1rem;
+   margin:10px 10px; 
+   }
+
+   .icon::after { 
+    top: 18%;
+   }
+
+   .progress-item-text { 
+    font-size:1rem; 
+   }
+
+    .order-card {
+        width: 95%
+    }
+}
+

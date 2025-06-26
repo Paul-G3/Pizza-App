@@ -1,0 +1,82 @@
+﻿<link href="~/css/index.css" rel="stylesheet" />
+
+<div class="pizza-slider">
+  <div class="pizza-slides">
+        <img src="~/images/image slider 1.jpeg" />
+        <img src="~/images/image slider 2.jpg" /> 
+
+        <div class="slider-overlay"></div>
+
+        <div class="slider-caption">
+            <h1>Fresh Pizza Delivered Hot</h1>
+            <p>Your cravings, just one click away 🍕</p>
+
+            <a asp-action="Menu" asp-controller="Pizza" class="order-button-container">
+               <button class="order-now">Order Now</button>
+            </a>
+        </div>
+  </div>
+
+</div>
+
+
+
+<div ng-app="HomePageModule">
+    <section class="popular-pizzas" ng-controller="HomePageController">
+
+        <h2 class="popular-picks-h2">Popular Picks</h2>
+
+        <div class="pizza-card-container" ng-repeat="pizza in MenuData">
+            <img ng-src="{{pizza.image}}" alt="{{pizza.name}}" />
+            <h3>{{pizza.pizzaName}}</h3>
+            <p class="size">{{pizza.size}}</p>
+            <p class="price">R{{pizza.price}}</p>
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+        </div>
+    </section>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <section class="about-section">
+            <h2>About Us</h2>
+            <p>We deliver mouthwatering pizzas, fresh from the oven, straight to your doorstep. Quality ingredients, unbeatable taste.</p>
+        </section>
+
+        <section class="support-section">
+            <h2>Need Help?</h2>
+            <p>Reach us at <a href="mailto:support@pizzashop.com">support@pizzashop.com</a> or <i class="fa-brands fa-whatsapp" id="app-icon"></i>  WhatsApp us.</p>
+        </section>
+
+        <section class="app-promo">
+            <h2>Get Our App</h2>
+            <p>Order pizza faster with our mobile app.</p>
+            <button class="download-btn">Download for Android</button>
+        </section>
+
+        <section class="reviews">
+            <h2>What Our Customers Say</h2>
+            <blockquote>"The pizza was amazing, and delivery was super fast!" – Nandipha N.</blockquote>
+        </section>
+
+        <section class="locations">
+            <h2>We Deliver In</h2>
+            <ul>
+                <li>Johannesburg</li>
+                <li>Sandton</li>
+                <li>Randburg</li>
+            </ul>
+        </section>
+
+    </div>
+</footer>
+
+
+<script src="~/js/index.js"></script>

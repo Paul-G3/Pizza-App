@@ -1,0 +1,92 @@
+﻿@* <link href="~/css/menu.css" rel="stylesheet" />
+
+<div ng-app="MenuModule">
+    <div ng-controller="MenuController">
+
+        <div class="searchContainer">
+            <div class="search-inner-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" ng-model="search" class="searchInput" placeholder="Search for Pizza......" />
+            </div>
+
+           <div class="pizza-size">
+                <select class="pizza-size-combo-box" ng-model="selectedSize">
+                    <option value="">Filter by pizza size</option>
+                    <option value="small">Small</option>
+                    <option value="medium">Medium</option>
+                    <option value="large">Large</option>
+                </select>
+           </div>
+
+            
+        </div>
+
+        <ul class="menu">
+
+            <li ng-repeat="pizza in MenuData | filter:filterPizzas" class="PizzaCard">
+
+                <p class="image-container">
+                    <img ng-src="{{pizza.image}}" />
+                </p> 
+
+                <p class="PizzaName">{{pizza.pizzaName}}</p>
+
+                <p class="price">R{{pizza.price}}</p>
+
+                <p>{{pizza.size}}</p>                 
+
+                <p class="button-container">
+                    <button class="add-to-cart" ng-click="addToCart(pizza)">Add to cart</button>
+                </p>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+
+
+<script src="~/js/menu.js"></script> *@
+
+<link href="~/css/menu.css" rel="stylesheet" />
+
+<div ng-app="MenuModule">
+    <div ng-controller="MenuController">
+
+        <div class="searchContainer">
+            <div class="search-inner-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" ng-model="search" class="searchInput" placeholder="Search for Pizza......" />
+            </div>
+
+            <div class="pizza-size">
+                <select class="pizza-size-combo-box" ng-model="selectedSize">
+                    <option value="">Filter by pizza size......</option>
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </div>
+        </div>
+
+        <ul class="menu">
+            <li ng-repeat="pizza in MenuData | filter:filterPizzas" class="PizzaCard">
+
+                <p class="image-container">
+                    <img ng-src="{{pizza.image}}" />
+                </p>
+
+                <p class="PizzaName">{{pizza.pizzaName}}</p>
+                <p class="price">R{{pizza.price}}</p>
+                <p>{{pizza.size}}</p>
+
+                <p class="button-container">
+                    <button class="add-to-cart" ng-click="addToCart(pizza)">Add to cart</button>
+                </p>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<script src="~/js/menu.js"></script>

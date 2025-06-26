@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "pizzaName": "Sweet Chilli",
+    "image": "/Images/sweet-chilli-chicken.webp",
+    "price": "74.99",
+    "size": "Medium"
+  },
+  {
+    "id": 2,
+    "pizzaName": "BBQ Chicken",
+    "image": "/Images/bbq-chicken.webp",
+    "price": "85.99",
+    "size": "Large"
+  },
+  {
+    "id": 3,
+    "pizzaName": "Peperoni",
+    "image": "/Images/pepperoni-gen.webp",
+    "price": "99.99",
+    "size": "Large"
+  },
+  {
+    "id": 4,
+    "pizzaName": "Tika",
+    "image": "/Images/tikka-chicken.webp",
+    "price": "99.99",
+    "size": "Large"
+  },
+  {
+    "id": 5,
+    "pizzaName": "Creamy Tika",
+    "image": "/Images/creamy-tikka-chicken-pizza.webp",
+    "price": "99.99",
+    "size": "Medium"
+  },
+  {
+    "id": 6,
+    "pizzaName": "Sweet and Sour",
+    "image": "/Images/sweet-and-sour-chicken.webp",
+    "price": "64.99",
+    "size": "Small"
+  },
+  {
+    "id": 7,
+    "pizzaName": "Bacon",
+    "image": "/Images/bbq-chicken-real-deal.webp",
+    "price": "64.99",
+    "size": "Small"
+  },
+  {
+    "id": 8,
+    "pizzaName": "Mushroom Chicken",
+    "image": "/Images/cheezy-chicken-and-mushroom.webp",
+    "price": "64.99",
+    "size": "Small"
+  },
+  {
+    "id": 9,
+    "pizzaName": "Spicy Mince",
+    "image": "/Images/bbq-chicken.webp",
+    "price": "85.99",
+    "size": "Large"
+  },
+  {
+    "id": 10,
+    "pizzaName": "Cheese",
+    "image": "/Images/cheezy-chicken-pizza.webp",
+    "price": "74.99",
+    "size": "Medium"
+  },
+  {
+    "id": 11,
+    "pizzaName": "Sweet Chilli",
+    "image": "/Images/sweet-chilli-chicken.webp",
+    "price": "85.99",
+    "size": "Large"
+  },
+  {
+    "id": 12,
+    "pizzaName": "Chicken Mayo",
+    "image": "/Images/chicken-cram-decker.webp",
+    "price": "74.99",
+    "size": "Medium"
+  },
+  {
+    "id": 13,
+    "pizzaName": "Garlic Chicken",
+    "image": "/Images/triple-decker-topped.webp",
+    "price": "104.99",
+    "size": "Large"
+  },
+  {
+    "id": 14,
+    "pizzaName": "Hawaiian",
+    "image": "/Images/triple-decker-chicken.webp",
+    "price": "109.99",
+    "size": "Large"
+  },
+  {
+    "id": 15,
+    "pizzaName": "Cheesy Margherita",
+    "image": "/Images/sweet-chillie-triple-decker.webp",
+    "price": "104.99",
+    "size": "Large"
+  }
+]

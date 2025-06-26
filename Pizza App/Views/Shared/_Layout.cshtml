@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="~/css/main.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/3c4e3843ca.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-animate.min.js"></script>
+
+    <title>Pizza App</title>
+</head>
+<body>
+
+    <div class="loader">
+    </div>
+
+    <div class="modal">
+        <div class="modal-background"></div>
+
+        <div class="modal-nav-content">
+
+            <div class="close-btn-container">
+                <span class="close-btn">&#10006;</span>
+            </div>
+            <ul class="modal-nav-bar">
+                <li class="modal-li">
+                    <a asp-controller="Pizza" asp-action="HomePage">Home</a>
+                </li>
+
+                <li class="modal-li">
+                    <a asp-controller="Pizza" asp-action="Menu">Menu</a>
+                </li>
+
+                <li class="modal-li">
+                    <a asp-controller="Pizza" asp-action="AboutUs">Track Order</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <header>
+
+        <nav>
+            <div class="ham-burger">
+                <span class="hamburger-icon">&#9776;</span>
+            </div>
+
+            <ul class="nav-bar">
+                <li>
+                   <a asp-controller="Pizza" asp-action="HomePage">Home</a>
+                </li>
+
+                <li>
+                    <a asp-controller="Pizza" asp-action="Menu">Menu</a>
+                </li>
+                <li>
+                    <a asp-controller="Pizza" asp-action="AboutUs">Track Order</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="order-container"> 
+
+            <a class="cart-container" asp-action="Cart" asp-controller="Pizza">                
+                    <button class="cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </button>
+                    <span class="orders-number">0</span>                             
+            </a>            
+        </div>
+    </header>
+
+    <main class="main">
+        @RenderBody()
+    </main>
+
+    <script src="~/js/main.js"></script>
+     
+</body>
+</html>

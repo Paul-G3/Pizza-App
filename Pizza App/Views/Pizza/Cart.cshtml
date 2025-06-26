@@ -1,0 +1,172 @@
+﻿<link href="~/css/cart.css" rel="stylesheet" />
+
+<div ng-app="CartModule">
+
+    <div class="cart-modal">
+        <div class="modal-background"></div>
+
+        <div class="user-details-modal">
+
+            <button class="close-btn-modal-user">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h1 class="user-details-h1">Customer Details</h1>
+            
+            <hr />
+            <div class="controls-container">
+                <div class="controls">
+                    <input type="text" placeholder="Name" class="name-input" />
+                    <span class="asterick">*</span>
+                    <span class="validation name-validation"></span>
+                </div>
+
+                <div class="controls">
+                    <input type="text" placeholder="Suurname" class="surname-input" />
+                    <span class="asterick">*</span>
+                    <span class="validation surname-validation">validation</span>
+                </div>
+
+                <div class="controls">
+                    <input type="text" placeholder="Email Address" class="email-input"/>
+                    <span class="asterick">*</span>
+                    <span class="validation email-validation">validation</span>
+                </div>
+
+                <div class="controls">
+                    <input type="text" placeholder="Confirm Email Address" class="confirm-email-input" />
+                    <span class="asterick">*</span>
+                    <span class="validation confirm-email-validation">validation</span>
+                </div>
+
+                <div class="controls">
+                    <input type="number" placeholder="Phone Number" class="phone-number-input"   />
+                    <span class="asterick">*</span>
+                    <span class="validation phoneNumber-validation">validation</span>
+                </div>
+
+                <div class="controls">
+                    <input type="number" placeholder="Confirm Phone Number" class="confirm-phone-number-input"   />
+                    <span class="asterick">*</span>
+                    <span class="validation confirm-phoneNumber-validation">validation</span>
+                </div>
+
+                <div class="controls">
+                    <input type="text" placeholder="Street Number" class="street-number-input" />
+                    <span class="asterick">*</span>
+                    <span class="validation street-number-validation">validation</span>
+                </div>
+
+                <div class="controls">
+                    <input type="text" placeholder="Confirm Street Number" class="confirm-street-number-input" />
+                    <span class="asterick">*</span>
+                    <span class="validation confirm-street-number-validation">validation</span>
+                </div>
+            </div>
+
+            <div class="button-container">
+                <button class="next-button">Next</button>
+            </div>
+
+        </div>
+
+        <div class="payment-modal">
+
+            <button class="back">
+                <i class="fa-solid fa-arrow-left-long"></i>
+            </button>
+
+            <button class="close-btn-payment">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-header">
+                <div class="master-card">
+                    <i class="fa-solid fa-circle" id="left-circle"></i>
+                    <i class="fa-solid fa-circle" id="right-circle"></i>
+                    <p>Master Card</p>
+                </div>               
+            </div>
+
+            <div class="controls">
+                <input type="text" placeholder="Cardholder Name" class="card-holder-name" />
+                <span class="asterick">*</span>
+                <span class="validation-payment card-holder-validation"></span>
+            </div>
+            <div class="number-inputs">               
+
+                <div class="controls">
+                    <input type="text" placeholder="Card Number" min="16" maxlength="16" class="card-number" />
+                    <span class="asterick">*</span>
+                    <span class="validation-payment card-number-valiation">Validation</span>
+                </div>
+
+                <div class="date-container">
+                    <input type="text" placeholder="Expiry Date (MM/YY)" min="5" maxlength="5" class="expriry-date"/>
+                    <span class="asterick">*</span>
+                    <span class="validation-payment expiry-date-validation">validation</span>
+                </div>
+
+                <div class="cvv-container">
+                    <input type="text" placeholder="CVV (123)" class="cvv-number" min="3" maxlength="3"/>
+                    <span class="asterick">*</span>
+                    <span class="validation-payment cvv-validation"></span>
+                </div>
+            </div>
+            
+            <div class="button-container">
+                <button class="pay-now-btn">Pay Now</button>
+            </div>            
+
+        </div>
+
+        <div class="order-placed-modal">
+            <i class="fa-regular fa-circle-check"></i>
+            <p>Order placed successfully!</p>
+            <div class="order-ok-btn"> 
+                 <a asp-action="AboutUs" asp-controller="Pizza" class="success-ok-btn">OK</a>
+                 
+            </div>
+        </div>
+    </div>
+
+
+    <div ng-controller="CartController" class="orders-container">
+        <p class="cart-message">No items in your cart</p>
+        <ul class="cart-list">
+            <li ng-repeat="cart in carts" class="pending-cart" >
+
+                <p class="image-container">
+                    <img ng-src="{{cart.image}}" />
+                </p>
+
+                <div class="inner-container">
+                    <p class="PizzaName">{{cart.pizzaName}}  <br /> {{cart.size}}</p>
+
+                    <p class="price-container">
+                        <span>R</span> {{ (cart.price * cart.quantity).toFixed(2) }}
+                    </p>
+
+                    <div class="buttons">                        
+                        <button class="btn-minus" ng-click="RemoveFromCart(cart)">
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                        <p class="total-pizzas">{{cart.quantity}}</p>
+
+                        <button class="btn-add" ng-click="AddingMore(cart)">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                 
+            </li>
+        </ul>
+
+        <div class="checkout-container">
+            <div class="total"></div>
+            <button class="checkout-btn">CheckOut</button>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/cart.js"></script>

@@ -1,0 +1,79 @@
+﻿<link href="~/css/aboutus.css" rel="stylesheet" />
+
+<div ng-app="OrdersModule" ng-controller="OrdersController">
+    <h1 class="orders-title">My Orders</h1>
+
+
+    <p class="no-orders">No orders found</p>
+
+
+    <div class="order-status-tracker">
+        <ul class="progress-container">
+            <li class="progress-item">
+                <div class="icon">
+                    <i class="fas fa-check"></i>
+                </div>
+                <div class="progress-item-text">Received</div>
+            </li>
+            <li class="progress-item">
+                <div class="icon">
+                    <i class="fa-solid fa-bread-slice"></i>
+                </div>
+                <div class="progress-item-text">Baking</div>
+            </li>
+            <li class="progress-item">
+                <div class="icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="progress-item-text">Out for Delivery</div>
+            </li>
+            <li class="progress-item">
+                <div class="icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="progress-item-text">Delivered</div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="placed-order-container">
+        <div class="order-card">
+            <p class="order-number">  ORDER NUMBER #{{Orders.orderNumber}}</p>
+            <p class="order-date-time">
+                <i class="fa-solid fa-clock"></i>
+                <span>{{Orders.orderTime}}</span>
+                <span>{{ Orders.orderDate}}</span>
+            </p>
+
+            <div class="orders-items-container">
+
+                <p class="items-text">Items</p>
+                <ul class="ordered-items">
+                    <li ng-repeat="item in Orders.items" class="item">
+                        <div class="left-inner-item">                            
+                            <span>
+                                <i class="fa-solid fa-pizza-slice" style="color: #e9b807;"></i>
+                                {{item.pizzaName}}
+                            </span>
+                            
+                            <span class="item-size">({{item.size}})</span> 
+                            <span class="item-quantity">x{{item.quantity}}</span>
+                        </div>
+                        <span class="item-price">R{{item.price}}</span>
+                    </li>
+                </ul>
+            </div>
+           
+
+            <p class="sub-total">Sub Total: R{{Orders.TotalPrice | number:2}}</p>
+            <p class="vat"> Vat: R{{Orders.TotalPrice * 0.15 | number:3}}</p>
+            <p class="total"><i class="fa-solid fa-money-bill" id="cash"></i> Total: R{{Orders.TotalPrice + (Orders.TotalPrice * 0.15) | number:2}}</p>
+
+            @*  <span class="order-status">{{Orders.status}}</span> *@
+        </div>
+    </div>
+    
+    
+</div>
+
+<script src="~/js/placedorders.js"></script>

@@ -1,0 +1,708 @@
+﻿.orders-container {
+    display: flex;
+    justify-content: center
+}
+.cart-list
+{
+    overflow:hidden;
+}
+.cart-message
+{
+    display:none;
+    font-size:1.3rem;
+}
+
+.pending-cart:nth-child(even) {
+    background-color: lightgray;
+    border-radius: 20px;
+}
+ 
+
+.pending-cart {
+    display: flex;
+    margin-bottom: 2vh;
+    align-items: center;
+}
+
+.pending-cart.ng-leave{
+    transition: 0.3s linear;
+    opacity:1;
+    transform:translateX(0);
+}
+
+.pending-cart.ng-leave-active{
+    opacity:0.5;
+    transform:translateX(-100%);
+}
+
+
+.image-container {
+    width: 121px;
+    height: 120px;
+}
+
+.image-container img{
+    width:100%;
+    height:100%;
+    border-radius:50%; 
+}
+
+.inner-container {
+    display: flex;
+    width: 45vw;
+    justify-content: space-around;
+}
+
+.PizzaName
+{
+     width:15vw;
+}
+
+.buttons
+{
+    width:20vw;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 1.5vw;
+}
+
+.btn-add {
+    background-color: blue;
+    padding: 10px;
+    border: 2px solid blue;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.btn-add:hover
+{
+    background-color: transparent;
+    color:blue;
+}
+
+.btn-minus {
+    background-color: red;
+    padding: 10px;
+    border: 2px solid red;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+.btn-minus:hover
+{
+    background-color: transparent;
+    color:red;
+}
+
+.pizza-quantity
+{
+    width:10vw;
+}
+
+.total-pizzas {
+    padding: 5px;
+}
+
+.checkout-container {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    position: fixed;
+    background-color: rgba(0,0,0,0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    bottom: 10vh;
+    right: 5vw;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition:0.3s all;
+}
+
+.checkout-btn {
+    text-align: center;
+    background-color: #0d6efd;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.checkout-btn:hover {
+   background-color: blue;
+}
+
+.total
+{
+    color:white;
+    font-size:1.2rem;
+}
+
+
+/*Customer Details modal*/
+.cart-modal {
+    display: none;
+}
+ 
+.modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 999999;
+}
+
+.user-details-modal {
+    position: fixed;
+    top: 20vh;
+    left: 15vw;
+    right: 15vw;
+    background-color: white;
+    z-index: 99999999;
+    height: fit-content;  
+    box-shadow: 0 2px 5px black;
+    border-radius: 8px;
+    animation: UserFadeIn 0.4s ease-in;
+    display:none;
+}
+
+
+.user-details-h1 {
+    text-align: center;
+    margin: 2vh 0;
+    color: rgb(13, 110, 253);
+}
+
+.controls-container {
+   padding: 1rem 2rem;
+   display:flex;
+   justify-content:space-between;
+   flex-wrap:wrap; 
+}
+
+.controls {
+    width: 50%;
+    margin-bottom: 2vh; 
+
+}
+
+.controls input 
+{
+    width: 80%;
+    padding:5px 10px;
+    font-size:1rem;
+    border-radius:7px; 
+    color:blue;
+    outline: none;
+    border: 1px solid gray;
+}
+ 
+
+.controls input:focus {
+    border-color: #0000ff;  
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.4); 
+}
+.asterick
+{
+    align-self:center;
+}
+.asterick, .validation {
+    color: orangered;
+}
+
+.validation
+{
+    display:none;
+}
+
+.show-validation{
+    display:none;
+}
+.button-container {
+    align-self: center;
+    width: 100%;
+    text-align: center;
+}
+
+.next-button {
+    width: 40%;
+    cursor: pointer;
+    padding: 10px 0;
+    font-size: 1.3rem;
+    margin-bottom: 3vh;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+.next-button:hover {
+    background-color: rgb(97, 173, 192);
+}
+
+.close-btn-modal-user {
+    width: fit-content;
+    position: absolute;
+    top: 1vh;
+    right: 1.5vw;
+    background-color: transparent;
+    border: none;
+    color: rgb(13, 110, 253);
+    font-size: 1.5rem;
+    transition: color 0.3s linear;
+    cursor:pointer;
+}
+
+    .close-btn-modal-user:hover {
+        color: red;
+    }
+
+
+.cart-modal.ng-leave .user-details-modal {
+    transition: opacity 5s;
+    opacity: 1;
+}
+
+.cart-modal.ng-leave-active .user-details-modal {
+    opacity: 0;
+}
+
+
+/*payment modal*/
+.payment-modal {
+    position: fixed;
+    top: 20vh;
+    left: 20vw;
+    right: 20vw;
+    background-color: white;
+    z-index: 99999999;
+    height: fit-content;
+    padding:1rem 2rem;
+    border-radius:15px;
+    display:none;
+}
+
+.master-card
+{
+    position:relative;
+    display:inline-block;
+}
+
+#right-circle
+{
+    position:absolute;
+    transform:translateX(-6px);
+    color:red;
+    font-size:3rem;
+}
+
+#left-circle {
+    color: blue;
+    font-size: 3rem;
+}
+
+#payPal {
+    font-size: 3rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    margin-bottom:3vh;
+}
+
+.account-holdeder-container {
+    width: 39%;
+}
+
+.account-holdeder-container input 
+{
+    width: 20vw;
+    padding:5px 10px;
+    font-size:1rem;
+    border-radius:7px;
+    border:1px solid black;
+    margin-bottom: 2vh;
+    color:blue;
+}
+
+.date-container {
+    margin-right: 5%;
+    width: 25%;
+}
+.cvv-container {
+    width: 18%;
+}
+
+.date-container input, .cvv-container input 
+{
+    width:89%;
+    padding:5px 10px;
+    font-size:1rem;
+    border-radius:7px;
+    border:1px solid black; 
+    color:blue;
+    
+}
+
+.date-container input:focus, .cvv-container input:focus {
+    border-color: #0000ff; /* or use "blue" */
+    outline: none; /* removes the default blue outline */
+    box-shadow: 0 0 5px rgba(0, 0, 255, 0.4); /* optional: adds a soft blue glow */
+    color: blue;
+}
+
+.validation-payment
+{
+    display:none;
+    color:orangered;
+    margin-top:0.5vh;
+    margin-left: 0.2vw;
+}
+
+.show-payment-validation{
+    display:block;
+}
+
+
+.number-inputs {
+    display: flex;
+}
+
+.pay-now-btn {
+    margin-top:3vh;
+    width: 40%;
+    cursor: pointer;
+    padding: 10px 0;
+    font-size: 1.3rem;
+    margin-bottom: 3vh;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+.pay-now-btn:hover {
+    background-color: rgb(97, 173, 192);
+}
+
+.back {
+    width: fit-content;
+    position: absolute;
+    top: 1vh;
+    left: 1.5vw;
+    background-color: transparent;
+    border: none;
+    color: rgb(13, 110, 253);
+    font-size: 1.5rem;
+    transition: color 0.3s linear;
+    cursor: pointer;
+}
+.back:hover {
+    color: red;
+}
+.close-btn-payment {
+    width: fit-content;
+    position: absolute;
+    top: 1vh;
+    right: 1.5vw;
+    background-color: transparent;
+    border: none;
+    color: rgb(13, 110, 253);
+    font-size: 1.5rem;
+    transition: color 0.3s linear;
+    cursor: pointer;
+}
+
+.close-btn-payment:hover {
+    color: red;
+}
+ 
+
+/*success modal*/ 
+.order-placed-modal {
+    position: fixed;
+    top: 15vh;
+    left: 38vw;
+    right:38vw; 
+    background-color: white;
+    z-index: 99999999;
+    height: fit-content;
+    padding: 1rem 2rem;
+    border-radius: 15px; 
+    text-align:center;
+    display:none;
+}
+
+.order-placed-modal i 
+{
+    font-size:10rem;
+    color:dodgerblue;
+    animation:IconAnimation 2.5s infinite ease-in-out;
+}
+
+.order-placed-modal p
+{
+    font-size:1.3rem;
+    margin: 1.5rem;
+} 
+
+.success-ok-btn {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    background-color: #0d6efd;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.success-ok-btn:hover {
+    background-color: rgb(97, 173, 192);
+}
+
+/*background-color: rgb(97, 173, 192);*/
+
+/*key frames*/
+
+@keyframes IconAnimation
+{
+    from
+    {
+        transform:scale(0.85);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+@keyframes UserFadeIn {
+    from
+    {
+        transform:scale(0.3);
+        opacity:0.5;
+    }
+    to {
+        transform:scale(1);
+        opacity:1;
+    }
+}
+ 
+
+/*media queriries*/
+@media screen and (max-width:1380px) 
+{
+    .number-inputs {
+        flex-wrap: wrap;
+    }
+     .controls {
+        width: 70%;
+    }
+
+    .controls input 
+    {
+        width: 95%;
+    }
+    .date-container {
+        width: 45%;
+        margin-bottom: 4%;
+    }
+
+    .cvv-container {
+        width: 30%;
+    }
+
+    .pay-now-btn {
+        width: 70%;
+    }
+
+    /*success modal*/
+    .order-placed-modal {
+        left: 32vw;
+        right: 32vw;
+    }
+}
+@media screen and (max-width:980px)
+{
+    /*success modal*/
+    .order-placed-modal {
+        left: 30vw;
+        right: 30vw;
+    }
+}
+
+
+@media screen and (max-width:828px)
+{
+    /*user details modal*/
+    .controls-container {
+        flex-direction: column;
+    }
+
+    .controls {
+        width: 100%;
+    }
+
+        .controls input {
+            width: 95%;
+        }
+
+
+    .user-details-modal {
+        top: 12vh;
+        left: 6vw;
+        right: 7vw;
+    }
+
+    .next-button {
+        width: 70%;
+    }
+
+    /*payment modal*/
+
+    .payment-modal {
+        left: 15vw;
+        right: 15vw;
+    }
+
+    .number-inputs {
+        flex-wrap: wrap;
+    }
+
+    .date-container {
+        width: 70%;
+        margin-bottom: 4%;
+    }
+
+    .cvv-container {
+        width: 40%;
+    }
+
+    .pay-now-btn {
+        width: 70%;
+    }
+
+    /*success modal*/
+    .order-placed-modal {
+        left: 25vw;
+        right: 25vw;
+    }
+} 
+ 
+@media screen and (max-width:780px) {
+    .inner-container {
+        width: 70vw;
+    }
+
+    .user-details-modal {
+        right: 4vw;
+        left: 5vw;
+    }
+
+    /*success modal*/
+    .order-placed-modal {
+        left: 20vw;
+        right: 20vw;
+    }
+
+    order-placed-modal p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .image-container img {
+        object-fit: cover;
+    }
+
+    .pending-cart {
+        flex-direction: column;
+        height: 60vh;
+        justify-content: center;
+    }
+
+    .image-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .inner-container {
+        margin-top: 2vh;
+        width: 10vw;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
+        gap: 1vh;
+    }
+
+    .PizzaName, .price-container {
+        width: 40vw;
+        text-align: center;
+    }
+
+    .buttons {
+        width: 40vw;
+    }
+
+    .number-inputs {
+        flex-wrap: wrap;
+    }
+
+    .date-container {
+        width: 90%;
+        margin-bottom: 4%;
+    }
+
+    .cvv-container {
+        width: 60%;
+    }
+
+    .payment-modal {
+        left: 5vw;
+        right: 5vw;
+    }
+
+    /*success modal*/
+    .order-placed-modal {
+        left: 15vw;
+        right: 15vw;
+    }
+
+    order-placed-modal p {
+        font-size: 1.3rem; 
+    }
+}
+
+@media screen and (max-width:480px)
+{
+    /*success modal*/
+    .order-placed-modal {
+        left: 5vw;
+        right: 5vw;
+    }
+
+    order-placed-modal p {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .image-container {
+        width: 230px;
+        height: 230px;
+    }
+}

@@ -1,0 +1,278 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    height:100vh;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 7%;
+    background-color: rgb(97, 173, 192);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 10vh;
+    z-index: 100000;
+}
+
+main {
+    padding: 2vh 2vw;
+    margin-top: 10vh;
+}
+ 
+/*
+.main.ng-enter {
+    opacity: 0.8; 
+}
+
+.main.ng-enter-active {
+    opacity: 1;     
+}*/
+
+.nav-bar li {
+    display: inline-block;
+    padding: 2px 20px;
+    cursor: pointer;
+    
+}
+
+.nav-bar li a {
+    display: block;
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ .nav-bar li:hover a {
+   transform: translateX(8px);
+   color: #e63946;
+ }
+
+.order-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-btn {
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(26, 26, 219);
+    border: 2px solid blue;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    transform: translateX(-18px);
+}
+ 
+
+ .order-btn:hover
+{
+   background-color: rgba(40, 253, 7, 0.873);
+   color: white;
+   border-color: rgba(40, 253, 7, 0.873);
+}
+.cart {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+    .cart i {
+        font-size: 1.7rem;
+        padding-top: 2px;
+        transition: 0.3s ease-in;
+    }
+
+    .cart:hover i {
+        color: white;
+    }
+
+.ham-burger {
+    display: none;
+}
+
+.hamburger-icon {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.cart-container
+{
+    display:block;
+    text-decoration: none;
+    position:relative;
+}
+
+.orders-number {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 50%;
+    position: absolute;
+    top: 32%;
+    right: -30%;
+}
+
+
+/*modal stying */
+
+.modal {
+    display: none;
+}
+
+.modal-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-nav-content {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 30vw;
+    background-color: rgb(29, 92, 217);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transform: translateX(-100%);
+    animation: slideIn 0.5s ease-in-out forwards;
+    z-index: 99999999;
+}
+
+.close-btn-container {
+    position: absolute;
+    right: 1.5vw;
+}
+
+.close-btn {
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.modal-nav-bar {
+    margin-top: 5vh;
+}
+
+    .modal-nav-bar li {
+        color: white;
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+.modal-li a
+{
+    color:white;
+    text-decoration:none;
+}
+/* js css classes*/
+.show-modal {
+    display: block;
+}
+
+    .show-modal .modal-nav-content {
+        animation: slideIn 0.5s ease-in-out forwards;
+    }
+
+/* Animation when closing */
+.hide-modal .modal-nav-content {
+    animation: slideOut 0.5s ease-in-out forwards;
+}
+
+
+/*page loader*/
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.6);
+    z-index: 99999999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid white;
+    z-index: 999999999;
+    border-top-color: rgb(97, 173, 192);
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn)
+    }
+
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/*animations*/
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+@media screen and (max-width:550px) {
+
+    .nav-bar {
+        display: none;
+    }
+
+    .ham-burger {
+        display: block;
+    }
+
+    .modal-nav-content {
+        width: 35vw;
+    }
+}

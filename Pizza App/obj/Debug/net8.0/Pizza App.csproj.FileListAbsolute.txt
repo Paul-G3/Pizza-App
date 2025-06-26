@@ -1,0 +1,34 @@
+C:\Visual Studio\Pizza App\Pizza App\bin\Debug\net8.0\appsettings.Development.json
+C:\Visual Studio\Pizza App\Pizza App\bin\Debug\net8.0\appsettings.json
+C:\Visual Studio\Pizza App\Pizza App\bin\Debug\net8.0\Pizza App.staticwebassets.runtime.json
+C:\Visual Studio\Pizza App\Pizza App\bin\Debug\net8.0\Pizza App.exe
+C:\Visual Studio\Pizza App\Pizza App\bin\Debug\net8.0\Pizza App.deps.json
+C:\Visual Studio\Pizza App\Pizza App\bin\Debug\net8.0\Pizza App.runtimeconfig.json
+C:\Visual Studio\Pizza App\Pizza App\bin\Debug\net8.0\Pizza App.dll
+C:\Visual Studio\Pizza App\Pizza App\bin\Debug\net8.0\Pizza App.pdb
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\Pizza App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\Pizza App.AssemblyInfoInputs.cache
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\Pizza App.AssemblyInfo.cs
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\Pizza App.csproj.CoreCompileInputs.cache
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\Pizza App.MvcApplicationPartsAssemblyInfo.cache
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\Pizza App.RazorAssemblyInfo.cache
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\Pizza App.RazorAssemblyInfo.cs
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\staticwebassets.build.json
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\staticwebassets.development.json
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\staticwebassets\msbuild.Pizza App.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\staticwebassets\msbuild.build.Pizza App.props
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Pizza App.props
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Pizza App.props
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\scopedcss\bundle\Pizza App.styles.css
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\scopedcss\projectbundle\Pizza App.bundle.scp.css
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\Pizza App.dll
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\refint\Pizza App.dll
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\Pizza App.pdb
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\Pizza App.genruntimeconfig.cache
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\ref\Pizza App.dll
+C:\Visual Studio\Pizza App\Pizza App\bin\Debug\net8.0\Pizza App.staticwebassets.endpoints.json
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\staticwebassets\msbuild.Pizza App.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Visual Studio\Pizza App\Pizza App\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
